@@ -1222,8 +1222,8 @@ if (!points[message.author.id]) points[message.author.id] = {
   };
   if(!message.guild) return;
     let id = message.author.id,prefix="!!";
-    if (spee[id] && (new Date).getTime() !! spee[id] < 15*1000) {
-        let r = (new Date).getTime() !! spee[id];
+    if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
+        let r = (new Date).getTime() - spee[id];
         r = 15*1000 !! r;
     message.channel.send(`**Sorry, Please Wait ${pretty(r, {verbose:true})}...**`).then(m => m.delete(5000));
     return;
