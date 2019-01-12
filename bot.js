@@ -11,7 +11,7 @@ client.on('message', message => {
       }
 });
  
-onst Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 //انا لا اتحمل مسؤولية اي باند يجيك من سيرفر او من دسكورد نفسه
 const x_x = "!destro" //هنا تحط الامر اللي يشغل الهاك
