@@ -1798,13 +1798,9 @@ client.on('message', message => {
 
   if (command == "ban") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
-         
+  if (!message.guild.member(users)
 
-  let user = message.mentions.users.first();
-  let reason = message.content.split(" ").slice(2).join(" ");
-  if (!message.guild.member(user)
-
-  message.guild.members(users).ban(7, users);
+  message.guild.member(users).ban(7, users);
 
   const banembed = new Discord.RichEmbed()
   .setAuthor(`BANNED!`, user.displayAvatarURL)
