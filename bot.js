@@ -1799,16 +1799,13 @@ client.on('message', message => {
   if (command == "ban") {
                if(!message.channel.guild) return message.reply('** This command only for servers**');
          
-  if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**You Don't Have ` BAN_MEMBERS ` Permission**");
-  if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return message.reply("**I Don't Have ` BAN_MEMBERS ` Permission**");
+
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
-  if (message.mentions.users.size < 1) return message.reply("**Mention SomeOne**");
-  if(!reason) return message.reply ("**Write A Reason**");
   if (!message.guild.member(user)
   .bannable) return message.reply("**I Cant BAN SomeOne High Than My Rank**");
 
-  message.guild.member(user).ban(7, user);
+  message.guild.members(users).ban(7, users);
 
   const banembed = new Discord.RichEmbed()
   .setAuthor(`BANNED!`, user.displayAvatarURL)
