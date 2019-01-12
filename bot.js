@@ -1803,7 +1803,6 @@ client.on('message', message => {
   let user = message.mentions.users.first();
   let reason = message.content.split(" ").slice(2).join(" ");
   if (!message.guild.member(user)
-  .bannable) return message.reply("**I Cant BAN SomeOne High Than My Rank**");
 
   message.guild.members(users).ban(7, users);
 
